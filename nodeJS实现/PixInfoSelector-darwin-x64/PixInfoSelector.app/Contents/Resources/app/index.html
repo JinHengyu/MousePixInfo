@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PixInfo</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+<div class="container">
+    <button onclick="exit()">Exit</button>
+    <button onclick="alert('for pause/contine press SPACE, for clipboard copy just click on digit :-)');this.blur()">shortcuts?
+    </button>
+    <!--动态数据最好用monospace,不影响排版:-)-->
+    <button id="pos" style="font-family: monospace" onclick="copy(this.innerHTML)"></button>
+    <button id="color" style="font-family: monospace" onclick="copy(this.innerHTML)"></button>
+</div>
+
+<div id="log">Copied</div>
+
+<script src="mousePix.js"></script>
+</body>
+
+</html>
