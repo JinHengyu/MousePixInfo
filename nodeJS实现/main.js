@@ -1,5 +1,8 @@
+//生成app命令:
+//electron-packager . --icon=icon.icns
+
 //electron的入口是main.js不是inde.html
-let {app, BrowserWindow} = require('electron');     //产生了新对象(app)
+let {app, BrowserWindow,ipcMain} = require('electron');     //产生了新对象(app)
 
 // 保持一个对于 window 对象的全局引用，不然，当 JavaScript 被 GC，
 // window 会被自动地关闭
@@ -31,3 +34,9 @@ app.on('ready', function () {
         mainWindow = null;
     });
 });
+
+
+ipcMain.on('exit',()=>{
+    process.exit(0);
+});
+

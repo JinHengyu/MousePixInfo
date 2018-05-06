@@ -1,15 +1,15 @@
-const win = require('electron').remote.getCurrentWindow();  //渲染进程访问主进程
-const {clipboard} = require('electron');
+const {clipboard,ipcRenderer,remote} = require('electron');
+// const win = remote.getCurrentWindow();  //渲染进程访问主进程
 const robot = require('robotjs');
 let pos = document.querySelector('#pos');
 let color = document.querySelector('#color');
 let log = document.querySelector('#log');
 
-function exit() {
-    win.removeAllListeners('close');
-    win.close();
-    remote.app.quit();
-}
+// function exit() {
+//     win.removeAllListeners('close');
+//     win.close();
+//     remote.app.quit();
+// }
 
 function copy(text) {
     clipboard.writeText(text);
@@ -34,7 +34,15 @@ addEventListener('keydown', (e) => {
             if (key) {
                 clearInterval(key);
                 key = null;
-            } else key = timer();
+                document.title = 'PixInfo ( paused )'
+            } else {
+                key = timer();
+                document.title = 'PixInfo'
+            }
+            break;
+        case 27:    //esc
+            ipcRenderer.send('exit');
+            // win.close(); //第二种方法
             break;
         default:
             break;
