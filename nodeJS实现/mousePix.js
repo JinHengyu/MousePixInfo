@@ -1,15 +1,15 @@
 const {clipboard,ipcRenderer,remote} = require('electron');
-// const win = remote.getCurrentWindow();  //渲染进程访问主进程
+const win = remote.getCurrentWindow();  //渲染进程访问主进程
 const robot = require('robotjs');
 let pos = document.querySelector('#pos');
 let color = document.querySelector('#color');
 let log = document.querySelector('#log');
 
-// function exit() {
-//     win.removeAllListeners('close');
-//     win.close();
-//     remote.app.quit();
-// }
+function exit() {
+    win.removeAllListeners('close');
+    win.close();
+    remote.app.quit();
+}
 
 function copy(text) {
     clipboard.writeText(text);

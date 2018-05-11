@@ -1,16 +1,16 @@
 {
   "name": "electron",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "description": "像素拾取神器",
   "main": "main.js",
-  "productName": "PixInfoSelector",
+  "productName": "PixelPicker",
   "private": true,
   "scripts": {
     "start": "electron ."
   },
   "dependencies": {
     "electron": "latest",
-    "robotjs": "^0.5.1"
+    "robotjs": "latest"
   },
   "os": [
     "darwin"
