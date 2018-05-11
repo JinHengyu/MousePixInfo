@@ -1,16 +1,19 @@
 {
   "name": "electron",
-  "version": "0.2.7",
-  "description": "像素拾取神器",
+  "version": "1.2.7",
+  "description": "像素拾取神器,快速获得鼠标在屏幕上的像素信息,包括坐标和rgb颜色",
   "main": "main.js",
   "productName": "PixelPicker",
   "private": true,
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=icon.icns --prune=true --out=output"
   },
   "dependencies": {
-    "electron": "latest",
     "robotjs": "latest"
+  },
+  "devDependencies": {
+    "electron": "latest"
   },
   "os": [
     "darwin"
