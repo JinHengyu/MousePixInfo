@@ -18,3 +18,7 @@ display the pixel Info of the mouse location including the ordination &amp; the 
 > 注意, javaSE版本已停止维护, 最终版本1.1.3, 2018-3-3
 > 
 > electron最新版本 2.3.8
+
+![](demo/5.png)
+
+![](demo/6.png)
