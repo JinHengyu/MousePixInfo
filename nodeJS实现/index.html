@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>PixInfo</title>
+    <title>像素拾取神器</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
@@ -12,11 +12,11 @@
     <button onclick="alert('for pause/contine press SPACE ( exit on ESC ), for clipboard copy just click on digit :-)');this.blur()">shortcuts?
     </button>
     <!--动态数据最好用monospace,不影响排版:-)-->
-    <button id="pos" style="font-family: monospace" onclick="copy(this.innerHTML)"></button>
-    <button id="color" style="font-family: monospace" onclick="copy(this.innerHTML)"></button>
+    <button id="pos" onclick="copy(this.innerHTML);this.blur();"></button>
+    <button id="color" onclick="copy(this.innerHTML);this.blur();"></button>
 </div>
 
-<div id="log">Copied</div>
+<!-- <div id="log">Copied</div> -->
 
 <script src="mousePix.js"></script>
 </body>
