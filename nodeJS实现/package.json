@@ -1,7 +1,7 @@
 {
-  "name": "electron",
+  "name": "pixelpicker",
   "version": "2.3.8",
-  "description": "像素拾取神器,快速获得鼠标在屏幕上的像素信息,包括坐标和rgb颜色",
+  "description": "像素拾取神器, 快速获得鼠标在屏幕上的像素信息, 包括坐标和rgb颜色",
   "main": "main.js",
   "productName": "PixelPicker",
   "private": true,
