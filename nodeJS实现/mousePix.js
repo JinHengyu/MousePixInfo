@@ -1,3 +1,6 @@
+// 沃日。。mac上的管理员用户（sudo）和系统用户（最高权限）是两个不同的用户。。。
+
+
 const {
     clipboard,
     ipcRenderer,
@@ -30,7 +33,7 @@ function copy(text) {
 
 
 let timer = () => setInterval(() => {
-    let {x,y} = robot.getMousePos();
+    let { x, y } = robot.getMousePos();
     pos.innerHTML = `${x},${y}`;
     color.innerHTML = '#' + robot.getPixelColor(x, y);
 }, 30);
