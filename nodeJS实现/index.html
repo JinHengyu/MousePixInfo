@@ -7,18 +7,22 @@
 </head>
 
 <body>
-<div class="container">
-    <button onclick="exit()">Exit</button>
-    <button onclick="alert('for pause/contine press SPACE ( exit on ESC ), for clipboard copy just click on digit :-)');this.blur()">shortcuts?
-    </button>
-    <!--动态数据最好用monospace,不影响排版:-)-->
-    <button id="pos" onclick="copy(this.innerHTML);this.blur();"></button>
-    <button id="color" onclick="copy(this.innerHTML);this.blur();"></button>
-</div>
+    <div class="container">
+        <button onclick="exit()">Exit</button>
+        <button onclick="alert('for pause/contine press SPACE ( exit on ESC ), for clipboard copy just click on digit :-)');this.blur()">shortcuts?
+        </button>
+        <!--动态数据最好用monospace,不影响排版:-)-->
+        <button id="pos" onclick="copy(this.innerHTML);this.blur();"></button>
+        <button id="color" onclick="copy(this.innerHTML);this.blur();"></button>
+    </div>
 
-<!-- <div id="log">Copied</div> -->
+    <div id="magnifier" style="display: none">
+        <canvas width="60" height="60"></canvas>
+    </div>
 
-<script src="mousePix.js"></script>
+
+    <script src="mousePix.js"></script>
+    <!-- <script src="magnifier.js"></script> -->
 </body>
 
 </html>
